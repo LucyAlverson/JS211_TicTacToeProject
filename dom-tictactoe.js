@@ -35,6 +35,8 @@ const addMarker = (id) => {
   // .getElementById(id)
   // document
   // .innerHTML 
+
+  document.getElementById(id).innerHTML = currentMarker
   
   // Arrange the above pieces into a single line of code
   // to add an X or O to the board to the DOM so it can be scene on the screen.
@@ -69,9 +71,14 @@ const horizontalWin = () => {
 }
 
 const verticalWin = () => {
-  // @TODO, Your code here: to check for vertical wins
+  if (board[0][0] === 'X' && board[1][0] === "X" && board[2][0] === "X" ) { 
+    return true
+} else if (board[0][1] === 'X' && board[1][1] === 'X' && board[2][1] === 'X') {
+    return true
+} else if (board[0][2] === 'X' && board[1][2] === 'X' && board[2][2] === 'X' ) {
+  return true
 }
-
+}
 const diagonalWin = () => {
   // @TODO, Your code here: to check for diagonal wins
 }
