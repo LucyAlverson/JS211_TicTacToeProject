@@ -67,8 +67,15 @@ const checkForWin = () => {
 }
 
 const horizontalWin = () => {
-  // @TODO, Your code here: to check for horizontal wins
+  if (board[0][0] === 'X' && board[0][1] === "X" && board[0][2] === "X" ) { 
+    return true
+} else if (board[1][0] === 'X' && board[1][1] === 'X' && board[1][2] === 'X') {
+    return true
+} else if (board[2][0] === 'X' && board[2][1] === 'X' && board[2][2] === 'X' ) {
+  return true
 }
+}
+  
 
 const verticalWin = () => {
   if (board[0][0] === 'X' && board[1][0] === "X" && board[2][0] === "X" ) { 
@@ -80,7 +87,11 @@ const verticalWin = () => {
 }
 }
 const diagonalWin = () => {
-  // @TODO, Your code here: to check for diagonal wins
+  if (board[0][0] === 'X' && board[1][1] === "X" && board[2][2] === "X" ) { 
+    return true
+} else if (board[2][0] === 'X' && board[1][1] === 'X' && board[0][2] === 'X') {
+    return true
+} 
 }
 
 const changeMarker = () => {
